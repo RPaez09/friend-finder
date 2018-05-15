@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Friend Finder</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center">Survey</h2>
+                <p class="text-center">Pick a number corresponding to how much you agree with the below, then submit your answers to see who best matches your choices.<br/>( 1 = Strongly Disagree, 5 = Strongly Agree )</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <form class="survey" role="form">
+                        <div class="form-group">
+                            <label for="reserve-name">You prefer living in a big city</label>
+                            <select class="form-control" id="q1">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="reserve-name">You like going on spontaneous adventures</label>
+                            <select class="form-control" id="q2">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="reserve-name">You like living close to a beach</label>
+                            <select class="form-control" id="q3">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="reserve-name">You like the Harry Potter books/films</label>
+                            <select class="form-control" id="q4">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="reserve-name">You make decisions based on emotion</label>
+                            <select class="form-control" id="q5">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="reserve-name">You like playing video games</label>
+                            <select class="form-control" id="q6">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="reserve-name">You like going on road trips</label>
+                            <select class="form-control" id="q7">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="reserve-name">You suggest songs and artists to your friends</label>
+                            <select class="form-control" id="q8">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="reserve-name">You can't put a good book down</label>
+                            <select class="form-control" id="q9">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="reserve-name">You like to play sports</label>
+                            <select class="form-control" id="q10">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <a class="btn btn-secondary btn-lg btn-block submit-btn" data-toggle="modal" data-target="#resultsModal" href="#" role="button"/>Submit</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="resultsModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center">Loading your result..</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <p id="result-name"></p>
+                    <img id="result-img" src="" class="img-responsive"/>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="survey.js"></script>
+</html>
